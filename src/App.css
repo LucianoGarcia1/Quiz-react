@@ -1,38 +1,81 @@
-.App {
-  text-align: center;
+:root{
+  --blue: #61dafb;
+  --black: #282c34;
+  --white: #ffffff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body{
+  width: 100%;
   min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+form{
+  max-width: 900px;
+  width: 100%;
+}
+
+fieldset{
+  width: 100%;
+  min-height: 200px;
+  background-color: var(--black);
+  margin: 1rem 0;
+  padding: 60px;
   display: flex;
   flex-direction: column;
+  gap: 1rem;
+  color: var(--white);
+  border: none;
+  border-radius: 5px;
+}
+
+h2{
+  color: var(--blue);
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+
+label{
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: flex-start;
+  gap: 1rem;
+  font-size: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
+button{
+  background-color: var(--blue);
+  color: var(--black);
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  border: none;
+  margin-bottom: 1rem;
+  width: 100%;
+  height: 45px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+P{
+  font-size: 2rem;
+  color: var(--black);
+}
+
+@media screen and (max-width: 928px){
+  form{
+    padding: 30px;
   }
-  to {
-    transform: rotate(360deg);
+}
+@media screen and (max-width: 500px){
+  fieldset{
+    padding: 40px;
   }
 }
